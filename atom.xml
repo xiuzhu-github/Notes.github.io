@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T08:16:36.781Z</updated>
+  <updated>2020-05-18T10:54:44.332Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC修改视图定位</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/</id>
+    <published>2020-05-18T10:53:09.783Z</published>
+    <updated>2020-05-18T10:54:44.332Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么是视图定位&quot;&gt;&lt;a href=&quot;#什么是视图定位&quot; class=&quot;headerlink&quot; title=&quot;什么是视图定位&quot;&gt;&lt;/a&gt;什么是视图定位&lt;/h1&gt;&lt;p&gt;如果代码写成这样，就表示跳转到页面
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC的工作原理</title>
@@ -69,34 +99,6 @@
     
     
       <category term="MVC" scheme="https://xiuzhu-github.github.io/tags/MVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>创建SpringMVC项目</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/</id>
-    <published>2020-05-18T03:09:00.000Z</published>
-    <updated>2020-05-18T07:32:48.593Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;学习SpringMVC框架第一步，先创建一个简单项目，了解流程。使用的是Eclipse+Tomcat9.0&lt;/p&gt;
-&lt;h1 id=&quot;创建项目springmvc&quot;&gt;&lt;a href=&quot;#创建项目springmvc&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
     
   </entry>
   
