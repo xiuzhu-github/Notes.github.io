@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T07:47:20.832Z</updated>
+  <updated>2020-05-18T08:13:11.855Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC的工作原理</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/springmvc-de-gong-zuo-yuan-li/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/springmvc-de-gong-zuo-yuan-li/</id>
+    <published>2020-05-18T08:11:34.985Z</published>
+    <updated>2020-05-18T08:13:11.855Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么是-MVC-模式&quot;&gt;&lt;a href=&quot;#什么是-MVC-模式&quot; class=&quot;headerlink&quot; title=&quot;什么是 MVC 模式&quot;&gt;&lt;/a&gt;什么是 MVC 模式&lt;/h1&gt;&lt;p&gt;MVC
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+  </entry>
   
   <entry>
     <title>MVC笔记</title>
