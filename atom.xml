@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T10:54:44.332Z</updated>
+  <updated>2020-05-18T12:57:54.811Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>注解方式进行配置页面跳转</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/</id>
+    <published>2020-05-18T12:52:31.731Z</published>
+    <updated>2020-05-18T12:57:54.811Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;修改IndexController&quot;&gt;&lt;a href=&quot;#修改IndexController&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC修改视图定位</title>
