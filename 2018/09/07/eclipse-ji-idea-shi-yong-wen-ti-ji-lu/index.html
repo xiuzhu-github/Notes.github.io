@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="注解方式进行配置页面跳转, 修竹">
+    <meta name="keywords" content="eclipse及idea使用问题记录, 修竹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>注解方式进行配置页面跳转 | 修竹</title>
+    <title>eclipse及idea使用问题记录 | 修竹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">注解方式进行配置页面跳转</h1>
+                    <h1 class="description center-align post-title">eclipse及idea使用问题记录</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SpringMVC/">
-                                <span class="chip bg-color">SpringMVC</span>
+                            <a href="/tags/idea/">
+                                <span class="chip bg-color">idea</span>
                             </a>
                         
-                            <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">实际操作</span>
+                            <a href="/tags/eclipse/">
+                                <span class="chip bg-color">eclipse</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                                <span class="chip bg-color">问题记录</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                SpringMVC
+                            <a href="/categories/IDE/" class="post-category">
+                                IDE
                             </a>
                         
                     </div>
@@ -460,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-18
+                    2018-09-07
                 </div>
                 
 
@@ -474,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    285
+                    610
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -491,38 +495,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>@<a href="目录">TOC</a></p>
-<h1 id="修改IndexController"><a href="#修改IndexController" class="headerlink" title="修改IndexController"></a>修改IndexController</h1><p>在类前面加上@Controller 表示该类是一个控制器<br>在方法handleRequest 前面加上 @RequestMapping(“/index”) 表示路径/index会映射到该方法上<br>注意：不再让IndexController实现Controller接口</p>
-<h1 id="修改springmvc-servlet-xml"><a href="#修改springmvc-servlet-xml" class="headerlink" title="修改springmvc-servlet.xml"></a>修改springmvc-servlet.xml</h1><p>去掉映射相关的配置，因为已经使用注解方式了</p>
-<p>增加</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"controller"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
-<p>表示从包controller下扫描有@Controller注解的类</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span>
-    xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span>
-    xmlns<span class="token operator">:</span>context<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/context"</span>
-    xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span>"http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans<span class="token operator">/</span>spring<span class="token operator">-</span>beans<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context        
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context<span class="token operator">/</span>spring<span class="token operator">-</span>context<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd"<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"controller"</span> <span class="token operator">/</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"irViewResolver"</span>
-        <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"prefix"</span> value<span class="token operator">=</span><span class="token string">"/WEB-INF/page/"</span> <span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span> <span class="token operator">/</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"simpleUrlHandlerMapping"</span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"</span><span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"mappings"</span><span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>             <span class="token operator">&lt;</span>props<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>                 <span class="token operator">&lt;</span>prop key<span class="token operator">=</span><span class="token string">"/index"</span><span class="token operator">></span>indexController<span class="token operator">&lt;</span><span class="token operator">/</span>prop<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>             <span class="token operator">&lt;</span><span class="token operator">/</span>props<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"indexController"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"controller.IndexController"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span></code></pre>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p>虽然效果和Hello Spring MVC中的一样，但是开发过程已经换成了注解方式<br><img src="https://img-blog.csdnimg.cn/20200518205038209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+                <p>使用eclipse或idea的时候会遇到各式各样的小问题，解决方案其实网上也大都搜得到，但是下次遇到的时候总是想不起来如何解决，还要花费时间再次查资料。所以以后把遇到的问题都记录一下。<br>@<a href="目录">TOC</a></p>
+<h1 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h1><h2 id="1-乱码"><a href="#1-乱码" class="headerlink" title="1.乱码"></a>1.乱码</h2><p>解决方法<br>【Window】–&gt;【Preferences】–&gt;【General】–&gt;【Workspace】–&gt;【Text file encoding】<br><img src="https://img-blog.csdnimg.cn/20200518215611284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-经常卡顿未响应"><a href="#2-经常卡顿未响应" class="headerlink" title="2.经常卡顿未响应"></a>2.经常卡顿未响应</h2><p>eclipse.ini配置文件主要参数介绍</p>
+<p>-vmargs：说明后面是VM的参数<br>-Xms512m：虚拟机占用系统的最小内存，初始分配<br>-Xmx2048m：虚拟机占用系统的最大内存，按需分配<br>-XX:PermSize=256M：最小堆大小。一般报内存不足时,都是说这个太小, 堆空间剩余小于5%就会警告,建议把这个稍微设大一点,不过要视自己电脑内存大小来设置，但不能超过MaxPermSize。<br>-XX:MaxPermSize=1024M：最大堆大小。这个也适当大些所以若出现问题，首先请调整Xms512m将其设置的小一些，就可以解决问题。</p>
+<p>打开eclipse.ini文件 更改一下虚拟机的最小内存和最大内存，我的之前是Xms256m和Xmx1024m 然后更改成了 Xms512m和Xmx2048m，可以正常启动，并且也没有再出现未响应现象。</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">-</span>startup
+plugins<span class="token operator">/</span>org<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>equinox<span class="token punctuation">.</span>launcher_1<span class="token number">.4</span><span class="token punctuation">.</span><span class="token number">0</span><span class="token punctuation">.</span>v20161219<span class="token operator">-</span><span class="token number">1356</span><span class="token punctuation">.</span>jar
+<span class="token operator">--</span>launcher<span class="token punctuation">.</span>library
+C<span class="token operator">:</span>\Users\lenovo\<span class="token punctuation">.</span>p2\pool\plugins\org<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>equinox<span class="token punctuation">.</span>launcher<span class="token punctuation">.</span>win32<span class="token punctuation">.</span>win32<span class="token punctuation">.</span>x86_64_1<span class="token number">.1</span><span class="token punctuation">.</span><span class="token number">551</span><span class="token punctuation">.</span>v20171108<span class="token operator">-</span><span class="token number">1834</span>
+<span class="token operator">-</span>product
+org<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>epp<span class="token punctuation">.</span><span class="token keyword">package</span><span class="token punctuation">.</span>jee<span class="token punctuation">.</span>product
+<span class="token operator">-</span>showsplash
+org<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>epp<span class="token punctuation">.</span><span class="token keyword">package</span><span class="token punctuation">.</span>common
+<span class="token operator">--</span>launcher<span class="token punctuation">.</span>defaultAction
+openFile
+<span class="token operator">--</span>launcher<span class="token punctuation">.</span>appendVmargs
+<span class="token operator">-</span>vm
+C<span class="token operator">:</span><span class="token operator">/</span>Program Files<span class="token operator">/</span>Java<span class="token operator">/</span>jdk1<span class="token number">.8</span><span class="token punctuation">.</span>0_60<span class="token operator">/</span>bin
+<span class="token operator">-</span>vmargs
+<span class="token operator">-</span>Dosgi<span class="token punctuation">.</span>requiredJavaVersion<span class="token operator">=</span><span class="token number">1.8</span>
+<span class="token operator">-</span>Dosgi<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>area<span class="token punctuation">.</span><span class="token keyword">default</span><span class="token operator">=</span><span class="token annotation punctuation">@user</span><span class="token punctuation">.</span>home<span class="token operator">/</span>eclipse<span class="token operator">-</span>workspace
+<span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>UseG1GC
+<span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>UseStringDeduplication
+<span class="token operator">--</span>add<span class="token operator">-</span>modules<span class="token operator">=</span>ALL<span class="token operator">-</span>SYSTEM
+<span class="token operator">-</span>Dosgi<span class="token punctuation">.</span>requiredJavaVersion<span class="token operator">=</span><span class="token number">1.8</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>修改部分<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token operator">-</span>Xms512m
+<span class="token operator">-</span>Xmx2048m
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<span class="token operator">--</span>add<span class="token operator">-</span>modules<span class="token operator">=</span>ALL<span class="token operator">-</span>SYSTEM
+<span class="token operator">-</span>Declipse<span class="token punctuation">.</span>p2<span class="token punctuation">.</span>max<span class="token punctuation">.</span>threads<span class="token operator">=</span><span class="token number">10</span>
+<span class="token operator">-</span>Doomph<span class="token punctuation">.</span>update<span class="token punctuation">.</span>url<span class="token operator">=</span>http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>download<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>org<span class="token operator">/</span>oomph<span class="token operator">/</span>updates<span class="token operator">/</span>milestone<span class="token operator">/</span>latest
+<span class="token operator">-</span>Doomph<span class="token punctuation">.</span>redirection<span class="token punctuation">.</span>index<span class="token punctuation">.</span>redirection<span class="token operator">=</span>index<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">-</span><span class="token operator">></span>http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>git<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>org<span class="token operator">/</span>c<span class="token operator">/</span>oomph<span class="token operator">/</span>org<span class="token punctuation">.</span>eclipse<span class="token punctuation">.</span>oomph<span class="token punctuation">.</span>git<span class="token operator">/</span>plain<span class="token operator">/</span>setups<span class="token operator">/</span>
+</code></pre>
+<h2 id="3-Eclipse打开报错，The-Eclipse-executable-launcher-was-unable-to-locate-its-companion-shared-library"><a href="#3-Eclipse打开报错，The-Eclipse-executable-launcher-was-unable-to-locate-its-companion-shared-library" class="headerlink" title="3.Eclipse打开报错，The Eclipse executable launcher was unable to locate its companion shared library."></a>3.Eclipse打开报错，The Eclipse executable launcher was unable to locate its companion shared library.</h2><p>这是由于多次卸载重装Eclipse后的配置错误，也可能是更换eclipse路径，导致配置文件与eclipse更换后的路径不符。</p>
+<p>这种错误的解决方法如下：</p>
+<p>首先，打开Eclipse安装目录下的配置文件eclipse.ini文件</p>
+<p>Eclipse.ini文件内容如下：<br><img src="https://img-blog.csdnimg.cn/2020051821573938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 画圈的两个修改为自己的本地地址</p>
+<h2 id="4-Eclipse启动错误：A-Java-Runtime-Environment-JRE-or-Java-Development-Kit-JDK-must-be-available……"><a href="#4-Eclipse启动错误：A-Java-Runtime-Environment-JRE-or-Java-Development-Kit-JDK-must-be-available……" class="headerlink" title="4.Eclipse启动错误：A Java Runtime Environment(JRE) or Java Development Kit(JDK) must be available……"></a>4.Eclipse启动错误：A Java Runtime Environment(JRE) or Java Development Kit(JDK) must be available……</h2><p><img src="https://img-blog.csdnimg.cn/20200518215751800.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>画圈的地方修改为本地地址</p>
+<h1 id="idea"><a href="#idea" class="headerlink" title="idea"></a>idea</h1><h2 id="1-全局搜索替换"><a href="#1-全局搜索替换" class="headerlink" title="1.全局搜索替换"></a>1.全局搜索替换</h2><p><a href="https://blog.csdn.net/gnail_oug/article/details/78281354" target="_blank" rel="noopener">https://blog.csdn.net/gnail_oug/article/details/78281354</a></p>
 
             </div>
             <hr/>
@@ -548,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/">https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/</a>
+                    <a href="https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/">https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -586,12 +598,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SpringMVC/">
-                                    <span class="chip bg-color">SpringMVC</span>
+                                <a href="/tags/idea/">
+                                    <span class="chip bg-color">idea</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">实际操作</span>
+                                <a href="/tags/eclipse/">
+                                    <span class="chip bg-color">eclipse</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                                    <span class="chip bg-color">问题记录</span>
                                 </a>
                             
                         </div>
@@ -759,7 +775,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon May 18 2020 20:52:31 GMT+0800',
+    id: 'Fri Sep 07 2018 17:25:00 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -784,9 +800,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/';
-        this.page.identifier = '/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/';
-        this.page.title = '注解方式进行配置页面跳转';
+        this.page.url = 'https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/';
+        this.page.identifier = '/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/';
+        this.page.title = 'eclipse及idea使用问题记录';
     };
     let disqus_shortname = '';
 
@@ -812,36 +828,73 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/">
+                <a href="/2020/05/18/ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="注解方式进行配置页面跳转">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="测试">
                         
-                        <span class="card-title">注解方式进行配置页面跳转</span>
+                        <span class="card-title">测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            注解方式进行配置页面跳转
+                            {\rtf1}
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xiuzhu
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="eclipse及idea使用问题记录">
+                        
+                        <span class="card-title">eclipse及idea使用问题记录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            eclipse及idea使用问题记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
+                            <a href="/categories/IDE/" class="post-category">
+                                    IDE
                                 </a>
                             
                             
@@ -852,65 +905,16 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/idea/">
+                        <span class="chip bg-color">idea</span>
                     </a>
                     
-                    <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">实际操作</span>
+                    <a href="/tags/eclipse/">
+                        <span class="chip bg-color">eclipse</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC修改视图定位">
-                        
-                        <span class="card-title">SpringMVC修改视图定位</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            SpringMVC修改视图定位
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">实际操作</span>
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+                        <span class="chip bg-color">问题记录</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T12:57:54.811Z</updated>
+  <updated>2020-05-18T13:53:36.178Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/"/>
     <id>https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/</id>
     <published>2020-05-18T12:52:31.731Z</published>
-    <updated>2020-05-18T12:57:54.811Z</updated>
+    <updated>2020-05-18T13:53:36.178Z</updated>
     
     <summary type="html">
     
@@ -37,7 +37,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
     
     
       <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
@@ -51,7 +51,7 @@
     <link href="https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/"/>
     <id>https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/</id>
     <published>2020-05-18T10:53:09.783Z</published>
-    <updated>2020-05-18T10:54:44.332Z</updated>
+    <updated>2020-05-18T13:53:29.018Z</updated>
     
     <summary type="html">
     
@@ -67,7 +67,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
     
     
       <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
@@ -81,7 +81,7 @@
     <link href="https://xiuzhu-github.github.io/2020/05/18/springmvc-de-gong-zuo-yuan-li/"/>
     <id>https://xiuzhu-github.github.io/2020/05/18/springmvc-de-gong-zuo-yuan-li/</id>
     <published>2020-05-18T08:11:34.985Z</published>
-    <updated>2020-05-18T08:16:36.781Z</updated>
+    <updated>2020-05-18T13:53:15.201Z</updated>
     
     <summary type="html">
     
@@ -97,7 +97,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
     
     
       <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
@@ -109,7 +109,7 @@
     <link href="https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/"/>
     <id>https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/</id>
     <published>2020-05-18T07:25:00.000Z</published>
-    <updated>2020-05-18T07:47:20.832Z</updated>
+    <updated>2020-05-18T13:53:04.825Z</updated>
     
     <summary type="html">
     
@@ -125,7 +125,7 @@
     </summary>
     
     
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+      <category term="MVC" scheme="https://xiuzhu-github.github.io/categories/MVC/"/>
     
     
       <category term="MVC" scheme="https://xiuzhu-github.github.io/tags/MVC/"/>
@@ -153,6 +153,38 @@
     </summary>
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>eclipse及idea使用问题记录</title>
+    <link href="https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/"/>
+    <id>https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/</id>
+    <published>2018-09-07T09:25:00.000Z</published>
+    <updated>2020-05-18T14:02:36.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用eclipse或idea的时候会遇到各式各样的小问题，解决方案其实网上也大都搜得到，但是下次遇到的时候总是想不起来如何解决，还要花费时间再次查资料。所以以后把遇到的问题都记录一下。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="IDE" scheme="https://xiuzhu-github.github.io/categories/IDE/"/>
+    
+    
+      <category term="idea" scheme="https://xiuzhu-github.github.io/tags/idea/"/>
+    
+      <category term="eclipse" scheme="https://xiuzhu-github.github.io/tags/eclipse/"/>
+    
+      <category term="问题记录" scheme="https://xiuzhu-github.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
