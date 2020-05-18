@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T03:09:27.523Z</updated>
+  <updated>2020-05-18T07:32:38.461Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MVC笔记</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/</id>
+    <published>2020-05-18T07:25:00.000Z</published>
+    <updated>2020-05-18T07:32:38.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;认识MVC&quot;&gt;&lt;a href=&quot;#认识MVC&quot; class=&quot;headerlink&quot; title=&quot;认识MVC&quot;&gt;&lt;/a&gt;认识MVC&lt;/h1&gt;&lt;h2 id=&quot;仅使用Servlet的短处&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="MVC" scheme="https://xiuzhu-github.github.io/tags/MVC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>创建SpringMVC项目</title>
     <link href="https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/"/>
     <id>https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/</id>
     <published>2020-05-18T03:09:00.000Z</published>
-    <updated>2020-05-18T03:09:27.523Z</updated>
+    <updated>2020-05-18T07:32:48.593Z</updated>
     
     <summary type="html">
     
