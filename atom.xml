@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>修竹</title>
+  
+  <subtitle>修竹的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xiuzhu-github.github.io/"/>
+  <updated>2020-05-18T00:59:23.685Z</updated>
+  <id>https://xiuzhu-github.github.io/</id>
+  
+  <author>
+    <name>xiuzhu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/ce-shi/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/ce-shi/</id>
+    <published>2020-05-18T00:59:23.685Z</published>
+    <updated>2020-05-18T00:59:23.685Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;{\rtf1}&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
