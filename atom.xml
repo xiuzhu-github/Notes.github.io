@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T00:59:23.685Z</updated>
+  <updated>2020-05-18T03:09:27.523Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>创建SpringMVC项目</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/chuang-jian-springmvc-xiang-mu/</id>
+    <published>2020-05-18T03:09:00.000Z</published>
+    <updated>2020-05-18T03:09:27.523Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;学习SpringMVC框架第一步，先创建一个简单项目，了解流程。使用的是Eclipse+Tomcat9.0&lt;/p&gt;
+&lt;h1 id=&quot;创建项目springmvc&quot;&gt;&lt;a href=&quot;#创建项目springmvc&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+  </entry>
   
   <entry>
     <title>测试</title>

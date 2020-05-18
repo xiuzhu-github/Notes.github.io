@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>创建SpringMVC项目</title>
+      <link href="/2020/05/18/chuang-jian-springmvc-xiang-mu/"/>
+      <url>/2020/05/18/chuang-jian-springmvc-xiang-mu/</url>
+      
+        <content type="html"><![CDATA[<p>学习SpringMVC框架第一步，先创建一个简单项目，了解流程。使用的是Eclipse+Tomcat9.0</p><h1 id="创建项目springmvc"><a href="#创建项目springmvc" class="headerlink" title="创建项目springmvc"></a>创建项目springmvc</h1><p>新建Dynamic Web Project<br>File-&gt;New-&gt;Other-&gt;Web-&gt;Dynamic Web Project<br><img src="https://img-blog.csdnimg.cn/20200518095316102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="导入jar包"><a href="#导入jar包" class="headerlink" title="导入jar包"></a>导入jar包</h1><p>下载lib.rar, 解压后复制到 e:/project/springmvc/WebContent/WEB-INF/lib目录下<br><img src="https://img-blog.csdnimg.cn/20200518100106676.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="web-xml"><a href="#web-xml" class="headerlink" title="web.xml"></a>web.xml</h1><p>在WEB-INF目录下创建 web.xml</p><p>配置Spring MVC的入口 <strong>DispatcherServlet</strong>，把所有的请求都提交到该Servlet</p><p>注意：</p><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>springmvc<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span></code></pre><p>springmvc这个名字在下一步会用到<img src="https://img-blog.csdnimg.cn/202005181009090.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="创建springmvc-servlet-xml"><a href="#创建springmvc-servlet-xml" class="headerlink" title="创建springmvc-servlet.xml"></a>创建springmvc-servlet.xml</h1><p>在WEB-INF目录下创建 springmvc-servlet.xml<br>springmvc-servlet.xml 与上一步中的</p><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>springmvc<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span></code></pre><p>springmvc对应</p><p>这是Spring MVC的 映射配置文件<br>表示访问路径/index会交给id=indexController的bean处理<br>id=indexController的bean配置为类：IndexController</p><h1 id="控制类-IndexController"><a href="#控制类-IndexController" class="headerlink" title="控制类 IndexController"></a>控制类 IndexController</h1><p>控制类 IndexController实现接口Controller ，提供方法handleRequest处理请求</p><p>SpringMVC通过 ModelAndView 对象把模型和视图结合在一起</p><pre class=" language-java"><code class="language-java">ModelAndView mav <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"index.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>mav<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"message"</span><span class="token punctuation">,</span> <span class="token string">"Hello Spring MVC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>表示视图是index.jsp<br>模型数据是 message，内容是 “Hello Spring MVC”<br><img src="https://img-blog.csdnimg.cn/20200518102135366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="准备index-jsp"><a href="#准备index-jsp" class="headerlink" title="准备index.jsp"></a>准备index.jsp</h1><p>在WebContent目录下创建index.jsp</p><p>index.jsp很简单，通过EL表达式显示message的内容<br><img src="https://img-blog.csdnimg.cn/20200518102411876.png" alt="在这里插入图片描述"></p><h1 id="部署在tomcat中，重启测试"><a href="#部署在tomcat中，重启测试" class="headerlink" title="部署在tomcat中，重启测试"></a>部署在tomcat中，重启测试</h1><p>部署在Tomcat中，重启tomcat，然后访问地址，观察效果<br>默认位置</p><pre class=" language-java"><code class="language-java">http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token operator">:</span><span class="token number">8080</span><span class="token operator">/</span>springmvc<span class="token operator">/</span>index</code></pre><p>我的Tomcat之前改过端口，所以是8888<br><img src="https://img-blog.csdnimg.cn/20200518110153860.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h1 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h1><ol><li>用户访问 /index</li><li>根据web.xml中的配置 所有的访问都会经过DispatcherServlet</li><li>根据 根据配置文件springmvc-servlet.xml ，访问路径/index<br>会进入IndexController类</li><li>在IndexController中指定跳转到页面index.jsp，并传递message数据</li><li>在index.jsp中显示message信息</li></ol><p><img src="https://img-blog.csdnimg.cn/20200518104735556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringMVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试</title>
       <link href="/2020/05/18/ce-shi/"/>
       <url>/2020/05/18/ce-shi/</url>
