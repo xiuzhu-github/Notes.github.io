@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="注解方式进行配置页面跳转, 修竹">
+    <meta name="keywords" content="SpringMVC实现客户端跳转, 修竹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>注解方式进行配置页面跳转 | 修竹</title>
+    <title>SpringMVC实现客户端跳转 | 修竹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">注解方式进行配置页面跳转</h1>
+                    <h1 class="description center-align post-title">SpringMVC实现客户端跳转</h1>
                 </div>
             </div>
         </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-18
+                    2018-09-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-18
+                    2020-05-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    285
+                    538
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -491,38 +491,91 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>@<a href="目录">TOC</a></p>
-<h1 id="修改IndexController"><a href="#修改IndexController" class="headerlink" title="修改IndexController"></a>修改IndexController</h1><p>在类前面加上@Controller 表示该类是一个控制器<br>在方法handleRequest 前面加上 @RequestMapping(“/index”) 表示路径/index会映射到该方法上<br>注意：不再让IndexController实现Controller接口</p>
-<h1 id="修改springmvc-servlet-xml"><a href="#修改springmvc-servlet-xml" class="headerlink" title="修改springmvc-servlet.xml"></a>修改springmvc-servlet.xml</h1><p>去掉映射相关的配置，因为已经使用注解方式了</p>
-<p>增加</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"controller"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
-<p>表示从包controller下扫描有@Controller注解的类</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span>
-    xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span>
-    xmlns<span class="token operator">:</span>context<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/context"</span>
-    xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span>"http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans<span class="token operator">/</span>spring<span class="token operator">-</span>beans<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context        
-    http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context<span class="token operator">/</span>spring<span class="token operator">-</span>context<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd"<span class="token operator">></span>
+                <p>之前无论是/index跳转到index.jsp 还是/addProduct 跳转到showProduct.jsp，都是服务端跳转。<br>这一篇练习如何进行客户端跳转<br>@<a href="目录">TOC</a></p>
+<h1 id="修改IndexController"><a href="#修改IndexController" class="headerlink" title="修改IndexController"></a>修改IndexController</h1><p>首先映射/jump到jump()方法<br>在jump()中编写如下代码</p>
+<pre class=" language-java"><code class="language-java">ModelAndView mav <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"redirect:/index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>redirect:/index<br>即表示客户端跳转的意思</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> controller<span class="token punctuation">;</span>
 
-    <span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"controller"</span> <span class="token operator">/</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"irViewResolver"</span>
-        <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletRequest<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletResponse<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ModelAndView<span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IndexController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/index"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ModelAndView <span class="token function">handleRequest</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        ModelAndView mav <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mav<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"message"</span><span class="token punctuation">,</span> <span class="token string">"Hello Spring MVC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> mav<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/jump"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ModelAndView <span class="token function">jump</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ModelAndView mav <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"redirect:/index"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> mav<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>  
+
+<span class="token punctuation">}</span></code></pre>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p>访问页面<br><a href="http://localhost:8888/springmvc/jump" target="_blank" rel="noopener">http://localhost:8888/springmvc/jump</a><br>结果跳转到了<br><img src="https://img-blog.csdnimg.cn/20200519093410242.png" alt="在这里插入图片描述"></p>
+<h1 id="客户端转发和服务端转发"><a href="#客户端转发和服务端转发" class="headerlink" title="客户端转发和服务端转发"></a>客户端转发和服务端转发</h1><table>
+<thead>
+<tr>
+<th align="center">redirect:xxx</th>
+<th align="right">forward:xxx</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">客户端跳转</td>
+<td align="right">服务端转发</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="center">url会跟随着变，变为xxx ，这时已是全新的独立的请求，不能够再使用前面获得的数据</td>
+<td align="right">url保持不变，且原获取到的值，在xxx 控制器下依旧能够用</td>
+</tr>
+<tr>
+<td align="center">xxx 是Controller 的映射值</td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+<pre class=" language-java"><code class="language-java">    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/Annotation"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ModelAndView <span class="token function">annotation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ModelAndView modelAndView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"annotation"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        modelAndView<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"message"</span><span class="token punctuation">,</span> <span class="token string">"注解形式的Controller"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> modelAndView<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/addPojo"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ModelAndView <span class="token function">addPojo</span><span class="token punctuation">(</span>Pojo pojo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ModelAndView modelAndView <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"redirect:/Annotation"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 前者客户端跳转    ， 这个 forward:/Annotation 服务端转发</span>
+        <span class="token keyword">return</span> modelAndView<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// annotation.jsp</span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">></span>$<span class="token punctuation">{</span>message <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+    <span class="token operator">&lt;</span>h2<span class="token operator">></span>$<span class="token punctuation">{</span>pojo<span class="token punctuation">.</span>id <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>           <span class="token comment" spellcheck="true">// redirect 即客户端跳转  ，这里将获取不到值(不会报错) ；  forward 即服务端转发，能够将addPojo方法获得的pojo 信息在这里信息</span>
+    <span class="token operator">&lt;</span>h2<span class="token operator">></span>$<span class="token punctuation">{</span>pojo<span class="token punctuation">.</span>name <span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>     <span class="token comment" spellcheck="true">// redirect 即客户端跳转  ，这里将获取不到值(不会报错) ；  forward 即服务端转发，能够将addPojo方法获得的pojo 信息在这里信息</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span></code></pre>
+<h1 id="ModelAndView"><a href="#ModelAndView" class="headerlink" title="ModelAndView"></a>ModelAndView</h1><pre class=" language-java"><code class="language-java">modelandview 对象 添加的键值传给jsp前端
+
+   ModelAndView m<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ModelAndVies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//对象</span>
+  m<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"keyname"</span><span class="token punctuation">,</span>values<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//jsp通过键名获取值,值可以使基本类型 pojo类 object</span>
+ m<span class="token punctuation">.</span><span class="token function">setViewName</span><span class="token punctuation">(</span><span class="token string">"jsp路径"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//前端页面</span>
+<span class="token keyword">return</span> m<span class="token punctuation">;</span></code></pre>
+<h1 id="为什么redirect-跳转到的是index而不是index-jsp？"><a href="#为什么redirect-跳转到的是index而不是index-jsp？" class="headerlink" title="为什么redirect 跳转到的是index而不是index.jsp？"></a>为什么redirect 跳转到的是index而不是index.jsp？</h1><pre class=" language-java"><code class="language-java">前面的springmvc<span class="token operator">-</span>servlet中已经定义了
+<span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 作用是把视图约定在<span class="token operator">/</span>WEB<span class="token operator">-</span>INF<span class="token operator">/</span>page<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>jsp这个位置<span class="token operator">--</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"prefix"</span> value<span class="token operator">=</span><span class="token string">"/WEB-INF/page/"</span> <span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span> <span class="token operator">/</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"simpleUrlHandlerMapping"</span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"</span><span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"mappings"</span><span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>             <span class="token operator">&lt;</span>props<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>                 <span class="token operator">&lt;</span>prop key<span class="token operator">=</span><span class="token string">"/index"</span><span class="token operator">></span>indexController<span class="token operator">&lt;</span><span class="token operator">/</span>prop<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>             <span class="token operator">&lt;</span><span class="token operator">/</span>props<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>         <span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>     <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"indexController"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"controller.IndexController"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span></code></pre>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p>虽然效果和Hello Spring MVC中的一样，但是开发过程已经换成了注解方式<br><img src="https://img-blog.csdnimg.cn/20200518205038209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>拦截jsp文件 <span class="token operator">--</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
 
             </div>
             <hr/>
@@ -548,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/">https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/</a>
+                    <a href="https://xiuzhu-github.github.io/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/">https://xiuzhu-github.github.io/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -759,7 +812,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon May 18 2020 20:52:31 GMT+0800',
+    id: 'Fri Sep 07 2018 17:25:00 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -784,9 +837,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/';
-        this.page.identifier = '/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/';
-        this.page.title = '注解方式进行配置页面跳转';
+        this.page.url = 'https://xiuzhu-github.github.io/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/';
+        this.page.identifier = '/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/';
+        this.page.title = 'SpringMVC实现客户端跳转';
     };
     let disqus_shortname = '';
 
@@ -812,54 +865,37 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/">
+                <a href="/2020/05/18/ce-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="注解方式进行配置页面跳转">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="测试">
                         
-                        <span class="card-title">注解方式进行配置页面跳转</span>
+                        <span class="card-title">测试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            注解方式进行配置页面跳转
+                            {\rtf1}
+
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xiuzhu
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">实际操作</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -871,24 +907,24 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/">
+                <a href="/2018/09/07/springmvc-jie-shou-biao-dan-shu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC修改视图定位">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="SpringMVC接受表单数据">
                         
-                        <span class="card-title">SpringMVC修改视图定位</span>
+                        <span class="card-title">SpringMVC接受表单数据</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringMVC修改视图定位
+                            SpringMVC接受表单数据
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-07
                             </span>
                         <span class="publish-author">
                             
