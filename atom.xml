@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-19T01:42:15.453Z</updated>
+  <updated>2020-05-19T10:57:59.318Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC使用Session</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/19/springmvc-shi-yong-session/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/19/springmvc-shi-yong-session/</id>
+    <published>2020-05-19T10:57:09.255Z</published>
+    <updated>2020-05-19T10:57:59.318Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Session在用户登录，一些特殊场合在页面间传递数据的时候会经常用到&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;修改IndexController&quot;&gt;&lt;a href=&quot;#修改IndexController&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC实现客户端跳转</title>
