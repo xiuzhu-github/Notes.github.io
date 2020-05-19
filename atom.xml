@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-18T13:53:36.178Z</updated>
+  <updated>2020-05-19T01:42:15.453Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,99 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC实现客户端跳转</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/19/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/19/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/</id>
+    <published>2020-05-19T01:38:56.264Z</published>
+    <updated>2020-05-19T01:42:15.453Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;之前无论是/index跳转到index.jsp 还是/addProduct 跳转到showProduct.jsp，都是服务端跳转。&lt;br&gt;这一篇练习如何进行客户端跳转&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMVC接受表单数据</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/</id>
+    <published>2020-05-19T00:10:59.903Z</published>
+    <updated>2020-05-19T01:42:23.798Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;pojo&quot;&gt;&lt;a href=&quot;#pojo&quot; class=&quot;headerlink&quot; title=&quot;pojo&quot;&gt;&lt;/a&gt;pojo&lt;/h1&gt;&lt;p&gt;新建实体类Product&lt;/p&gt;
+&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>eclipse及idea使用问题记录</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/18/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/18/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/</id>
+    <published>2020-05-18T13:51:03.334Z</published>
+    <updated>2020-05-19T01:42:32.559Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用eclipse或idea的时候会遇到各式各样的小问题，解决方案其实网上也大都搜得到，但是下次遇到的时候总是想不起来如何解决，还要花费时间再次查资料。所以以后把遇到的问题都记录一下。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="IDE" scheme="https://xiuzhu-github.github.io/categories/IDE/"/>
+    
+    
+      <category term="idea" scheme="https://xiuzhu-github.github.io/tags/idea/"/>
+    
+      <category term="eclipse" scheme="https://xiuzhu-github.github.io/tags/eclipse/"/>
+    
+      <category term="问题记录" scheme="https://xiuzhu-github.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>注解方式进行配置页面跳转</title>
@@ -153,99 +246,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC实现客户端跳转</title>
-    <link href="https://xiuzhu-github.github.io/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/"/>
-    <id>https://xiuzhu-github.github.io/2018/09/07/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/</id>
-    <published>2018-09-07T09:25:00.000Z</published>
-    <updated>2020-05-19T01:40:52.409Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;之前无论是/index跳转到index.jsp 还是/addProduct 跳转到showProduct.jsp，都是服务端跳转。&lt;br&gt;这一篇练习如何进行客户端跳转&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
-    
-      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC接受表单数据</title>
-    <link href="https://xiuzhu-github.github.io/2018/09/07/springmvc-jie-shou-biao-dan-shu-ju/"/>
-    <id>https://xiuzhu-github.github.io/2018/09/07/springmvc-jie-shou-biao-dan-shu-ju/</id>
-    <published>2018-09-07T09:25:00.000Z</published>
-    <updated>2020-05-19T00:12:12.409Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;pojo&quot;&gt;&lt;a href=&quot;#pojo&quot; class=&quot;headerlink&quot; title=&quot;pojo&quot;&gt;&lt;/a&gt;pojo&lt;/h1&gt;&lt;p&gt;新建实体类Product&lt;/p&gt;
-&lt;pre class=&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
-    
-      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>eclipse及idea使用问题记录</title>
-    <link href="https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/"/>
-    <id>https://xiuzhu-github.github.io/2018/09/07/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/</id>
-    <published>2018-09-07T09:25:00.000Z</published>
-    <updated>2020-05-18T23:57:20.154Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;使用eclipse或idea的时候会遇到各式各样的小问题，解决方案其实网上也大都搜得到，但是下次遇到的时候总是想不起来如何解决，还要花费时间再次查资料。所以以后把遇到的问题都记录一下。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="IDE" scheme="https://xiuzhu-github.github.io/categories/IDE/"/>
-    
-    
-      <category term="idea" scheme="https://xiuzhu-github.github.io/tags/idea/"/>
-    
-      <category term="eclipse" scheme="https://xiuzhu-github.github.io/tags/eclipse/"/>
-    
-      <category term="问题记录" scheme="https://xiuzhu-github.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
