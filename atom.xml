@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-19T10:57:59.318Z</updated>
+  <updated>2020-05-19T12:13:08.935Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC上传文件</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/19/springmvc-shang-chuan-wen-jian/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/19/springmvc-shang-chuan-wen-jian/</id>
+    <published>2020-05-19T12:12:10.257Z</published>
+    <updated>2020-05-19T12:13:08.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;这里写目录标题&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;配置web-xml允许访问-jpg&quot;&gt;&lt;a href=&quot;#配置web-xml允许访问-jpg&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMVC处理中文问题</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/19/mvc-zhong-chu-li-zhong-wen-wen-ti/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/19/mvc-zhong-chu-li-zhong-wen-wen-ti/</id>
+    <published>2020-05-19T11:29:54.113Z</published>
+    <updated>2020-05-19T11:43:38.370Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;之前练习过提交表单数据，但是提交的数据包含中文，这一篇练习如何处理中文。在Spring MVC中处理中文问题和Filter处理中文问题是一样的手段&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Filter&quot;&gt;&lt;a href=&quot;#Filter&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC使用Session</title>
