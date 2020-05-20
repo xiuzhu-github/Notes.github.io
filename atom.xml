@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-19T14:06:09.360Z</updated>
+  <updated>2020-05-20T14:02:39.694Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git笔记</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/20/git-bi-ji/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/20/git-bi-ji/</id>
+    <published>2020-05-20T13:59:48.755Z</published>
+    <updated>2020-05-20T14:02:39.694Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://git-scm.com/book/zh/v2&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官方中文手册&lt;/a&gt;&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;版本控制&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://xiuzhu-github.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://xiuzhu-github.github.io/tags/git/"/>
+    
+      <category term="笔记" scheme="https://xiuzhu-github.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode刷题记录——数组与矩阵</title>
