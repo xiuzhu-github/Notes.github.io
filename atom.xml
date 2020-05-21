@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-20T14:02:39.694Z</updated>
+  <updated>2020-05-21T07:10:06.871Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSM框架整合练习——一个简单的文章管理系统</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/</id>
+    <published>2020-05-21T07:07:25.874Z</published>
+    <updated>2020-05-21T07:10:06.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用SSM框架搭建的简易文章管理系统，实现了简单的增删改查功能。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;开发工具版本：&quot;&gt;&lt;a href=&quot;#开发工具版本：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="SSM" scheme="https://xiuzhu-github.github.io/categories/SSM/"/>
+    
+    
+      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
+    
+      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>git笔记</title>
