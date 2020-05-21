@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git操作练习, 修竹">
+    <meta name="keywords" content="java Semaphore实现ABC三个线程循环打印, 修竹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git操作练习 | 修竹</title>
+    <title>java Semaphore实现ABC三个线程循环打印 | 修竹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git操作练习</h1>
+                    <h1 class="description center-align post-title">java Semaphore实现ABC三个线程循环打印</h1>
                 </div>
             </div>
         </div>
@@ -431,16 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">实际操作</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                <span class="chip bg-color">多线程</span>
                             </a>
                         
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/%E7%BB%83%E4%B9%A0/">
+                                <span class="chip bg-color">练习</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category">
-                                git
+                            <a href="/categories/java/" class="post-category">
+                                java
                             </a>
                         
                     </div>
@@ -478,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    421
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -495,27 +495,83 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>github账号注册很久了，使用过idea的版本管理，但是命令行还不会。正好新写了一个小项目，练习一下如何上传到github。<br>@<a href="目录">TOC</a></p>
-<h1 id="新建github仓库"><a href="#新建github仓库" class="headerlink" title="新建github仓库"></a>新建github仓库</h1><p>关于注册账号，邮箱认证什么的就不再多说了<br>新建一个仓库，添加名称和描述<br><img src="https://img-blog.csdnimg.cn/20200521154013502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>圈中的地址随后会用到<br><img src="https://img-blog.csdnimg.cn/20200521154257678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载地址</a></p>
-<h1 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h1><h2 id="1-创建本地版本库（文件夹）"><a href="#1-创建本地版本库（文件夹）" class="headerlink" title="1.创建本地版本库（文件夹）"></a>1.创建本地版本库（文件夹）</h2><p>你可以直接右击新建文件夹，也可以右击打开Git bash命令行窗口通过命令来创建。</p>
-<p> 下面通过命令行在桌面新建一个TEST文件夹（你也可以在其他任何地方创建这个文件夹），并且进入这个文件夹<br> <img src="https://img-blog.csdnimg.cn/20200521153242898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="2-通过命令git-init把这个文件夹变成Git可管理的仓库"><a href="#2-通过命令git-init把这个文件夹变成Git可管理的仓库" class="headerlink" title="2.通过命令git init把这个文件夹变成Git可管理的仓库"></a>2.通过命令git init把这个文件夹变成Git可管理的仓库</h2><p><img src="https://img-blog.csdnimg.cn/20200521153339102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>里面会出现一个.git文件夹，它是Git用来跟踪和管理版本库的。如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。<br><img src="https://img-blog.csdnimg.cn/20200521153441862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="3-把项目添加到仓库"><a href="#3-把项目添加到仓库" class="headerlink" title="3.把项目添加到仓库"></a>3.把项目添加到仓库</h2><p>这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过git status来查看你当前的状态），然后通过git add把项目添加到仓库（或git add .把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。在这个过程中你其实可以一直使用git status来查看你当前的状态。<br><img src="https://img-blog.csdnimg.cn/20200521154553264.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里提示你虽然把项目粘贴过来了，但还没有add到Git仓库上，然后我们通过git add .把刚才复制过来的项目全部添加到仓库上。<br><img src="https://img-blog.csdnimg.cn/20200521154757407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="4-用git-commit把项目提交到仓库"><a href="#4-用git-commit把项目提交到仓库" class="headerlink" title="4.用git commit把项目提交到仓库"></a>4.用git commit把项目提交到仓库</h2><p><img src="https://img-blog.csdnimg.cn/20200521155602734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>-m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行搜索。</p>
-<h2 id="创建SSH-KEY"><a href="#创建SSH-KEY" class="headerlink" title="创建SSH KEY"></a>创建SSH KEY</h2><p>接下来就到了连接远程仓库。首先需要创建sshkey。之前创建过的话这一步直接跳过。<br>不知道自己创建过没有的话可以查看你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件<br><img src="https://img-blog.csdnimg.cn/20200521160106379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>没有的话可以通过下面的命令创建：</p>
-<pre class=" language-java"><code class="language-java">   $ ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"youremail@example.com"</span></code></pre>
-<h2 id="6-github设置sshkey"><a href="#6-github设置sshkey" class="headerlink" title="6.github设置sshkey"></a>6.github设置sshkey</h2><p>登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。</p>
-<h2 id="7-创建关联"><a href="#7-创建关联" class="headerlink" title="7.创建关联"></a>7.创建关联</h2><p>就可以和本地仓库进行关联了，根据创建好的Git仓库页面的提示，可以在本地TEST仓库的命令行输入</p>
-<pre class=" language-java"><code class="language-java">$ git remote add origin https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>xiuzhu<span class="token operator">-</span>github<span class="token operator">/</span>SSMTest<span class="token punctuation">.</span>git</code></pre>
-<p>origin后面加的是之前Github上创建好的仓库的地址。<br><img src="https://img-blog.csdnimg.cn/20200521160535263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="8-内容推送到远程仓库"><a href="#8-内容推送到远程仓库" class="headerlink" title="8.内容推送到远程仓库"></a>8.内容推送到远程仓库</h2><p>关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了，通过：</p>
-<pre class=" language-java"><code class="language-java">$ git push <span class="token operator">-</span>u origin master</code></pre>
-<p> 由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
-<pre class=" language-java"><code class="language-java">$ git push origin master</code></pre>
-<p>这一步需要登录<br><img src="https://img-blog.csdnimg.cn/20200521160804398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入SSHKey<br><img src="https://img-blog.csdnimg.cn/20200521161057842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入私钥<br><img src="https://img-blog.csdnimg.cn/20200521161208707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>执行的时间有点长，完成后的界面是这样的：<br><img src="https://img-blog.csdnimg.cn/20200521161852252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>刷新github，可以看到已经传上了<br><img src="https://img-blog.csdnimg.cn/20200521162141743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里出现了安全提示。<br>点开：<br><img src="https://img-blog.csdnimg.cn/20200521162323722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点开错误信息：<br><img src="https://img-blog.csdnimg.cn/2020052116244747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看到是版本问题。四个问题都是有版本漏洞。修改版本就行了。<br>至此就完成了将本地项目上传到Github的整个过程。</p>
-<h1 id="更新项目"><a href="#更新项目" class="headerlink" title="更新项目"></a>更新项目</h1><p>当以后需要更新项目的时候有四步需要走<br>第一步：执行git pull命令将GitHub上的代码当下来合并代码，防止提交新代码的时候起冲突<br>第二步：执行git add命令将代码添加到仓库<br>第三步：执行git commit命令将代码提交到仓库<br>第四步：执行git push命令将代码提交到GitHub</p>
+                <p>Semaphore位于java.util.concurrent包下。其中有两个重要的方法acquire()和release()。acquire用来获取一个信号量，并且是阻塞型的，如果当前还有可用的信号量，则获取成功，可用信号量减1，使用完后可用release释放信号量。<br>下面的例子有ABC三个线程。A负责输出1 4 7 B负责输出2 5 8 C负责3 6 9。要求通过信号量机制 控制这三个线程按照顺序输出。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> test<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>ExecutorService<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>Executors<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span>Semaphore<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SemaphoreTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+     <span class="token comment" spellcheck="true">//设置信号量，用来控制可以同时访问的线程数量</span>
+    <span class="token keyword">public</span> Semaphore s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Semaphore</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> Semaphore s2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Semaphore</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> Semaphore s3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Semaphore</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">SemaphoreTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建一个可缓存线程池</span>
+        ExecutorService exe <span class="token operator">=</span> Executors<span class="token punctuation">.</span><span class="token function">newCachedThreadPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Thread t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        s1<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取信号量，s1 - 1</span>
+                        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        i<span class="token operator">++</span><span class="token punctuation">;</span>
+                        <span class="token comment" spellcheck="true">//方便看到运行结果</span>
+                        Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        s2<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//释放信号量，s2 + 1</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// TODO Auto-generated catch block</span>
+                        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        Thread t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        s2<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取信号量，s2 - 1</span>
+                        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        i<span class="token operator">++</span><span class="token punctuation">;</span>
+                        Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        s3<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//释放信号量，s3 + 1</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// TODO Auto-generated catch block</span>
+                        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        Thread t3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">9</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                        s3<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取信号量，s3 - 1</span>
+                        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        i<span class="token operator">++</span><span class="token punctuation">;</span>
+                        Thread<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        s1<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//释放信号量，s1 + 1</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// TODO Auto-generated catch block</span>
+                        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        exe<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        exe<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span>t2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        exe<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span>t3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>运行结果：<br><img src="https://img-blog.csdnimg.cn/20200521214716210.png" alt="在这里插入图片描述"><br>相关的博客：<br><a href="https://blog.csdn.net/carson0408/article/details/79475723?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">Semaphore的工作原理及实例</a><br><a href="https://blog.csdn.net/zhaojianting/article/details/80395085?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-12.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-12.nonecase" target="_blank" rel="noopener">java并发编程之Semaphore原理分析与实例</a><br><a href="https://blog.csdn.net/hanchao5272/article/details/79780045?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">Java并发33:Semaphore基本方法与应用场景实例</a></p>
 
             </div>
             <hr/>
@@ -541,7 +597,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/">https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/</a>
+                    <a href="https://xiuzhu-github.github.io/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/">https://xiuzhu-github.github.io/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,16 +635,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">实际操作</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                                    <span class="chip bg-color">多线程</span>
                                 </a>
                             
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/%E7%BB%83%E4%B9%A0/">
+                                    <span class="chip bg-color">练习</span>
                                 </a>
                             
                         </div>
@@ -756,7 +812,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Thu May 21 2020 16:28:47 GMT+0800',
+    id: 'Thu May 21 2020 21:50:53 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -781,9 +837,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/';
-        this.page.identifier = '/2020/05/21/git-cao-zuo-lian-xi/';
-        this.page.title = 'git操作练习';
+        this.page.url = 'https://xiuzhu-github.github.io/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/';
+        this.page.identifier = '/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/';
+        this.page.title = 'java Semaphore实现ABC三个线程循环打印';
     };
     let disqus_shortname = '';
 
@@ -809,9 +865,10 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/">
                     <div class="card-image">
@@ -829,9 +886,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -844,6 +901,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -870,19 +928,19 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/">
+                <a href="/2020/05/21/git-cao-zuo-lian-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SSM框架整合练习——一个简单的文章管理系统">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="git操作练习">
                         
-                        <span class="card-title">SSM框架整合练习——一个简单的文章管理系统</span>
+                        <span class="card-title">git操作练习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一个简单的练习，实现了增删改查的功能
+                            git基本操作的练习
                         
                     </div>
                     <div class="publish-info">
@@ -893,8 +951,8 @@ gitment.render('gitment-content');
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SSM/" class="post-category">
-                                    SSM
+                            <a href="/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
@@ -904,12 +962,16 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
-                    </a>
-                    
                     <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
                         <span class="chip bg-color">实际操作</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>

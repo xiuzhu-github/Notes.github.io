@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-21T08:30:47.850Z</updated>
+  <updated>2020-05-21T13:52:51.813Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>git操作练习</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/</id>
-    <published>2020-05-21T08:28:47.658Z</published>
-    <updated>2020-05-21T08:30:47.850Z</updated>
+    <title>java Semaphore实现ABC三个线程循环打印</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/</id>
+    <published>2020-05-21T13:50:53.296Z</published>
+    <updated>2020-05-21T13:52:51.813Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,38 @@
       
         
         
-          &lt;p&gt;github账号注册很久了，使用过idea的版本管理，但是命令行还不会。正好新写了一个小项目，联系一下如何上传到github。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;Semaphore位于java.util.concurrent包下。其中有两个重要的方法acquire()和release()。acquire用来获取一个信号量，并且是阻塞型的，如果当前还有可用的信号量，则获取成功，可用信号量减1，使用完后可用release释放信号量。&lt;b
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://xiuzhu-github.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://xiuzhu-github.github.io/tags/java/"/>
+    
+      <category term="多线程" scheme="https://xiuzhu-github.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="练习" scheme="https://xiuzhu-github.github.io/tags/%E7%BB%83%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git操作练习</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/</id>
+    <published>2020-05-21T08:28:47.658Z</published>
+    <updated>2020-05-21T08:33:48.456Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;github账号注册很久了，使用过idea的版本管理，但是命令行还不会。正好新写了一个小项目，练习一下如何上传到github。&lt;br&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;新建github仓库&quot;&gt;&lt;a href=&quot;#新建github仓库&quot;
         
       
