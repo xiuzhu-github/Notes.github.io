@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringMVC接受表单数据, 修竹">
+    <meta name="keywords" content="git操作练习, 修竹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringMVC接受表单数据 | 修竹</title>
+    <title>git操作练习 | 修竹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -314,7 +314,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringMVC接受表单数据</h1>
+                    <h1 class="description center-align post-title">git操作练习</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SpringMVC/">
-                                <span class="chip bg-color">SpringMVC</span>
-                            </a>
-                        
                             <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
                                 <span class="chip bg-color">实际操作</span>
+                            </a>
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                SpringMVC
+                            <a href="/categories/git/" class="post-category">
+                                git
                             </a>
                         
                     </div>
@@ -460,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -491,72 +495,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>@<a href="目录">TOC</a></p>
-<h1 id="pojo"><a href="#pojo" class="headerlink" title="pojo"></a>pojo</h1><p>新建实体类Product</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> pojo<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Product</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">private</span> <span class="token keyword">int</span> id<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">float</span> price<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">float</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> price<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token keyword">float</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-<h1 id="addProduct-jsp"><a href="#addProduct-jsp" class="headerlink" title="addProduct.jsp"></a>addProduct.jsp</h1><p>在web目录下 （不是在WEB-INF下）增加商品的页面addProduct.jsp<br>注意：产品名称input的name要使用name，而不是 product.name</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ page language<span class="token operator">=</span><span class="token string">"java"</span> contentType<span class="token operator">=</span><span class="token string">"text/html; charset=UTF-8"</span>
-    pageEncoding<span class="token operator">=</span><span class="token string">"UTF-8"</span> <span class="token keyword">import</span><span class="token operator">=</span><span class="token string">"java.util.*"</span> isELIgnored<span class="token operator">=</span><span class="token string">"false"</span><span class="token operator">%</span><span class="token operator">></span>
-
-<span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token string">"addProduct"</span><span class="token operator">></span>
-
-    产品名称 ：<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"name"</span> value<span class="token operator">=</span><span class="token string">""</span><span class="token operator">></span><span class="token operator">&lt;</span>br <span class="token operator">/</span><span class="token operator">></span>
-    产品价格： <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> name<span class="token operator">=</span><span class="token string">"price"</span> value<span class="token operator">=</span><span class="token string">""</span><span class="token operator">></span><span class="token operator">&lt;</span>br <span class="token operator">/</span><span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"submit"</span> value<span class="token operator">=</span><span class="token string">"增加商品"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">></span></code></pre>
-<h1 id="ProductController"><a href="#ProductController" class="headerlink" title="ProductController"></a>ProductController</h1><p>控制器ProductController，准备一个add方法映射/addProduct路径</p>
-<p>为add方法准备一个Product 参数，用于接收注入</p>
-<p>最后跳转到showProduct页面显示用户提交的数据</p>
-<p>注： addProduct.jsp 提交的name和price会自动注入到参数 product里<br>注： 参数product会默认被当做值加入到ModelAndView 中，相当于：</p>
-<pre class=" language-java"><code class="language-java">mav<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"product"</span><span class="token punctuation">,</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> controller<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>ModelAttribute<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestParam<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ModelAndView<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> pojo<span class="token punctuation">.</span>Product<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@Controller</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProductController</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/addProduct"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> ModelAndView <span class="token function">add</span><span class="token punctuation">(</span>Product product<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-        ModelAndView mav <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ModelAndView</span><span class="token punctuation">(</span><span class="token string">"showProduct"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> mav<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<h1 id="showProduct-jsp"><a href="#showProduct-jsp" class="headerlink" title="showProduct.jsp"></a>showProduct.jsp</h1><p>在WEB-INF/page 目录下创建 showProduct.jsp<br>用 EL 表达式显示用户提交的名称和价格</p>
-<h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h1><p><img src="https://img-blog.csdnimg.cn/20200519080808503.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200519080838886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+                <p>github账号注册很久了，使用过idea的版本管理，但是命令行还不会。正好新写了一个小项目，联系一下如何上传到github。<br>@<a href="目录">TOC</a></p>
+<h1 id="新建github仓库"><a href="#新建github仓库" class="headerlink" title="新建github仓库"></a>新建github仓库</h1><p>关于注册账号，邮箱认证什么的就不再多说了<br>新建一个仓库，添加名称和描述<br><img src="https://img-blog.csdnimg.cn/20200521154013502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>圈中的地址随后会用到<br><img src="https://img-blog.csdnimg.cn/20200521154257678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载地址</a></p>
+<h1 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h1><h2 id="1-创建本地版本库（文件夹）"><a href="#1-创建本地版本库（文件夹）" class="headerlink" title="1.创建本地版本库（文件夹）"></a>1.创建本地版本库（文件夹）</h2><p>你可以直接右击新建文件夹，也可以右击打开Git bash命令行窗口通过命令来创建。</p>
+<p> 下面通过命令行在桌面新建一个TEST文件夹（你也可以在其他任何地方创建这个文件夹），并且进入这个文件夹<br> <img src="https://img-blog.csdnimg.cn/20200521153242898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="2-通过命令git-init把这个文件夹变成Git可管理的仓库"><a href="#2-通过命令git-init把这个文件夹变成Git可管理的仓库" class="headerlink" title="2.通过命令git init把这个文件夹变成Git可管理的仓库"></a>2.通过命令git init把这个文件夹变成Git可管理的仓库</h2><p><img src="https://img-blog.csdnimg.cn/20200521153339102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>里面会出现一个.git文件夹，它是Git用来跟踪和管理版本库的。如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。<br><img src="https://img-blog.csdnimg.cn/20200521153441862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="3-把项目添加到仓库"><a href="#3-把项目添加到仓库" class="headerlink" title="3.把项目添加到仓库"></a>3.把项目添加到仓库</h2><p>这时候你就可以把你的项目粘贴到这个本地Git仓库里面（粘贴后你可以通过git status来查看你当前的状态），然后通过git add把项目添加到仓库（或git add .把该目录下的所有文件添加到仓库，注意点是用空格隔开的）。在这个过程中你其实可以一直使用git status来查看你当前的状态。<br><img src="https://img-blog.csdnimg.cn/20200521154553264.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里提示你虽然把项目粘贴过来了，但还没有add到Git仓库上，然后我们通过git add .把刚才复制过来的项目全部添加到仓库上。<br><img src="https://img-blog.csdnimg.cn/20200521154757407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="4-用git-commit把项目提交到仓库"><a href="#4-用git-commit把项目提交到仓库" class="headerlink" title="4.用git commit把项目提交到仓库"></a>4.用git commit把项目提交到仓库</h2><p><img src="https://img-blog.csdnimg.cn/20200521155602734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>-m后面引号里面是本次提交的注释内容，这个可以不写，但最好写上，不然会报错，详情自行搜索。</p>
+<h2 id="创建SSH-KEY"><a href="#创建SSH-KEY" class="headerlink" title="创建SSH KEY"></a>创建SSH KEY</h2><p>接下来就到了连接远程仓库。首先需要创建sshkey。之前创建过的话这一步直接跳过。<br>不知道自己创建过没有的话可以查看你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件<br><img src="https://img-blog.csdnimg.cn/20200521160106379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>没有的话可以通过下面的命令创建：</p>
+<pre class=" language-java"><code class="language-java">   $ ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa <span class="token operator">-</span>C <span class="token string">"youremail@example.com"</span></code></pre>
+<h2 id="6-github设置sshkey"><a href="#6-github设置sshkey" class="headerlink" title="6.github设置sshkey"></a>6.github设置sshkey</h2><p>登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。</p>
+<h2 id="7-创建关联"><a href="#7-创建关联" class="headerlink" title="7.创建关联"></a>7.创建关联</h2><p>就可以和本地仓库进行关联了，根据创建好的Git仓库页面的提示，可以在本地TEST仓库的命令行输入</p>
+<pre class=" language-java"><code class="language-java">$ git remote add origin https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>xiuzhu<span class="token operator">-</span>github<span class="token operator">/</span>SSMTest<span class="token punctuation">.</span>git</code></pre>
+<p>origin后面加的是之前Github上创建好的仓库的地址。<br><img src="https://img-blog.csdnimg.cn/20200521160535263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="8-内容推送到远程仓库"><a href="#8-内容推送到远程仓库" class="headerlink" title="8.内容推送到远程仓库"></a>8.内容推送到远程仓库</h2><p>关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了，通过：</p>
+<pre class=" language-java"><code class="language-java">$ git push <span class="token operator">-</span>u origin master</code></pre>
+<p> 由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
+<pre class=" language-java"><code class="language-java">$ git push origin master</code></pre>
+<p>这一步需要登录<br><img src="https://img-blog.csdnimg.cn/20200521160804398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入SSHKey<br><img src="https://img-blog.csdnimg.cn/20200521161057842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入私钥<br><img src="https://img-blog.csdnimg.cn/20200521161208707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>执行的时间有点长，完成后的界面是这样的：<br><img src="https://img-blog.csdnimg.cn/20200521161852252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>刷新github，可以看到已经传上了<br><img src="https://img-blog.csdnimg.cn/20200521162141743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里出现了安全提示。<br>点开：<br><img src="https://img-blog.csdnimg.cn/20200521162323722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点开错误信息：<br><img src="https://img-blog.csdnimg.cn/2020052116244747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以看到是版本问题。四个问题都是有版本漏洞。修改版本就行了。<br>至此就完成了将本地项目上传到Github的整个过程。</p>
+<h1 id="更新项目"><a href="#更新项目" class="headerlink" title="更新项目"></a>更新项目</h1><p>当以后需要更新项目的时候有四步需要走<br>第一步：执行git pull命令将GitHub上的代码当下来合并代码，防止提交新代码的时候起冲突<br>第二步：执行git add命令将代码添加到仓库<br>第三步：执行git commit命令将代码提交到仓库<br>第四步：执行git push命令将代码提交到GitHub</p>
 
             </div>
             <hr/>
@@ -572,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">修竹</a>
+                    <a href="/about" rel="external nofollow noreferrer">xiuzhu</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -582,7 +541,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiuzhu-github.github.io/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/">https://xiuzhu-github.github.io/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/</a>
+                    <a href="https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/">https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -595,7 +554,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">修竹</a>
+                    <a href="/about" target="_blank">xiuzhu</a>
                     !
                 </span>
             </div>
@@ -620,12 +579,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SpringMVC/">
-                                    <span class="chip bg-color">SpringMVC</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
                                     <span class="chip bg-color">实际操作</span>
+                                </a>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -793,7 +756,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Tue May 19 2020 08:10:59 GMT+0800',
+    id: 'Thu May 21 2020 16:28:47 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -818,9 +781,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://xiuzhu-github.github.io/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/';
-        this.page.identifier = '/2020/05/19/springmvc-jie-shou-biao-dan-shu-ju/';
-        this.page.title = 'SpringMVC接受表单数据';
+        this.page.url = 'https://xiuzhu-github.github.io/2020/05/21/git-cao-zuo-lian-xi/';
+        this.page.identifier = '/2020/05/21/git-cao-zuo-lian-xi/';
+        this.page.title = 'git操作练习';
     };
     let disqus_shortname = '';
 
@@ -846,35 +809,94 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/19/springmvc-shi-xian-ke-hu-duan-tiao-zhuan/">
+                <a href="/2020/05/21/git-cao-zuo-lian-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringMVC实现客户端跳转">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="git操作练习">
                         
-                        <span class="card-title">SpringMVC实现客户端跳转</span>
+                        <span class="card-title">git操作练习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringMVC实现客户端跳转
+                            git基本操作的联系
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
+                            <a href="/categories/git/" class="post-category">
+                                    git
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
+                        <span class="chip bg-color">实际操作</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SSM框架整合练习——一个简单的文章管理系统">
+                        
+                        <span class="card-title">SSM框架整合练习——一个简单的文章管理系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一个简单的练习，实现了增删改查的功能
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SSM/" class="post-category">
+                                    SSM
                                 </a>
                             
                             
@@ -890,63 +912,6 @@ gitment.render('gitment-content');
                     
                     <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
                         <span class="chip bg-color">实际操作</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/18/eclipse-ji-idea-shi-yong-wen-ti-ji-lu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="eclipse及idea使用问题记录">
-                        
-                        <span class="card-title">eclipse及idea使用问题记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            eclipse及idea使用问题记录
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/IDE/" class="post-category">
-                                    IDE
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/idea/">
-                        <span class="chip bg-color">idea</span>
-                    </a>
-                    
-                    <a href="/tags/eclipse/">
-                        <span class="chip bg-color">eclipse</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
-                        <span class="chip bg-color">问题记录</span>
                     </a>
                     
                 </div>
