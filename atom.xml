@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-21T13:52:51.813Z</updated>
+  <updated>2020-05-22T09:13:19.841Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora的使用</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/22/typor-de-shi-yong/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/22/typor-de-shi-yong/</id>
+    <published>2020-05-22T09:11:33.465Z</published>
+    <updated>2020-05-22T09:13:19.841Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Typora 是一款支持实时预览的 Markdown 文本编辑器。由于在测试阶段，目前是免费的。&lt;br&gt;教程非常多：&lt;br&gt;&lt;a href=&quot;https://sspai.com/post/54912&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编辑器" scheme="https://xiuzhu-github.github.io/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    
+      <category term="Typora" scheme="https://xiuzhu-github.github.io/tags/Typora/"/>
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>java Semaphore实现ABC三个线程循环打印</title>
@@ -84,7 +113,7 @@
     <link href="https://xiuzhu-github.github.io/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/"/>
     <id>https://xiuzhu-github.github.io/2020/05/21/ssm-kuang-jia-zheng-he-lian-xi-yi-ge-jian-dan-de-wen-zhang-guan-li-xi-tong/</id>
     <published>2020-05-21T07:07:25.874Z</published>
-    <updated>2020-05-21T07:10:06.871Z</updated>
+    <updated>2020-05-21T14:10:54.024Z</updated>
     
     <summary type="html">
     

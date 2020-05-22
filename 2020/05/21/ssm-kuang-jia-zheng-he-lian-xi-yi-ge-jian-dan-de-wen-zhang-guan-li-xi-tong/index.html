@@ -493,22 +493,19 @@
             <div id="articleContent">
                 <p>使用SSM框架搭建的简易文章管理系统，实现了简单的增删改查功能。<br>@<a href="目录">TOC</a></p>
 <h1 id="开发工具版本："><a href="#开发工具版本：" class="headerlink" title="开发工具版本："></a>开发工具版本：</h1><ul>
-<li><p>IntelliJ IDEA Ultimate 2019.3.1</p>
-</li>
-<li><p>Apache-tomcat-9.0.24</p>
-</li>
-<li><p>JDK 1.8.0_201</p>
-</li>
-<li><p>MySQL 8.011</p>
-</li>
-<li><p>Maven 3.6.3</p>
-<h1 id="最终的项目结构"><a href="#最终的项目结构" class="headerlink" title="最终的项目结构"></a>最终的项目结构</h1><p>接下来是具体的步骤：</p>
+<li>IntelliJ IDEA Ultimate 2019.3.1</li>
+<li>Apache-tomcat-9.0.24</li>
+<li>JDK 1.8.0_201</li>
+<li>MySQL 8.011</li>
+<li>Maven 3.6.3<h1 id="最终的项目结构"><a href="#最终的项目结构" class="headerlink" title="最终的项目结构"></a>最终的项目结构</h1></li>
+</ul>
+<p>接下来是具体的步骤：</p>
 <h1 id="IDEA-Maven搭建项目骨架"><a href="#IDEA-Maven搭建项目骨架" class="headerlink" title="IDEA+Maven搭建项目骨架"></a>IDEA+Maven搭建项目骨架</h1><h2 id="1-新建Maven项目："><a href="#1-新建Maven项目：" class="headerlink" title="1. 新建Maven项目："></a>1. 新建Maven项目：</h2><p>过程：File -&gt; New -&gt; Project -&gt; Maven -&gt; 勾选 Create from archetype -&gt; 选择 maven-archetype-webapp(注意：此处不要错选成上面的cocoom-22-archetype-webapp。第一次弄的时候只找webapp很容易选错。。。)<br><img src="https://img-blog.csdnimg.cn/20200521095802495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击next。在弹出的new project 选项卡中填写项目名称和项目地址，填写GroupId和Artifactid，其中GroupID是项目组织唯一的标识符，实际对应JAVA的包的结构，是main目录里java的目录结构，ArtifactID是项目的唯一的标识符，实际对应项目的名称，就是项目根目录的名称。对于入门练习，这两项可以随意填写。<br><img src="https://img-blog.csdnimg.cn/20200521100203596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>之后点击next 选择Maven版本（其中IDEA 专业版自带Maven，也可以选择自己下载的maven）。完成后点击Finish，完成项目骨架的创建。<strong>idea自带的Maven3默认位置在C盘。会占用C盘空间，而且如果重装系统的话，配置会丢失，所以我在别的盘另外装了一个。<a href="https://blog.csdn.net/qq_27093465/article/details/52957253?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">更改默认位置的方法</a></strong></p>
 <h2 id="2-在新建的项目中添加所需要的文件-文件夹"><a href="#2-在新建的项目中添加所需要的文件-文件夹" class="headerlink" title="2. 在新建的项目中添加所需要的文件/文件夹"></a>2. 在新建的项目中添加所需要的文件/文件夹</h2><p>创建后的项目如图所示：<br><img src="https://img-blog.csdnimg.cn/20200521101230140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>IntelliJ IDEA默认创建maven项目时是没有resource文件夹的，所以需要创建。<a href="https://blog.csdn.net/khxu666/article/details/79851070?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">方法</a>（这里用的评论里的方法，比较快）<br>接下来我们需要在这之上新建一些目录。在项目的根目录下新建target文件夹，系统自动将其设置为“Excluded”<br><img src="https://img-blog.csdnimg.cn/20200521102033481.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>在src/main目录下新建Directory：“java”，会自动将其设置为“Source Root”（即：此项目默认的代码文件源目录）<br>老版本手动设置的方法：<br><img src="https://img-blog.csdnimg.cn/20200521102329768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><p>在刚才新建的java文件下新建“com”包，再在com包下新建四个包，分别命名为：pojo,service,dao,controller。<br>上面新建的四个包：pojo,service,dao,controller，其所存放的分别是：</p>
-</li>
+<ul>
 <li><p>pojo:存放自定义的java类。如：paper类，user类，book类等，每个类的属性设为private，并提供public属性的getter/setter方法让外界访问</p>
 </li>
 <li><p>service：定义接口，包含系统所提供的功能。</p>
@@ -1872,7 +1869,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.5k</span>&nbsp;字
+                class="white-color">18.8k</span>&nbsp;字
             
             
             

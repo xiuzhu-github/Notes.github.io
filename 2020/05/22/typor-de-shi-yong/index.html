@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringMVC关于拦截器的使用, 修竹">
+    <meta name="keywords" content="Typora的使用, 修竹">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringMVC关于拦截器的使用 | 修竹</title>
+    <title>Typora的使用 | 修竹</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringMVC关于拦截器的使用</h1>
+                    <h1 class="description center-align post-title">Typora的使用</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SpringMVC/">
-                                <span class="chip bg-color">SpringMVC</span>
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
                             </a>
                         
-                            <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">实际操作</span>
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
                     </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                SpringMVC
+                            <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-category">
+                                编辑器
                             </a>
                         
                     </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    703
+                    244
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -491,107 +491,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这个是基于之前的视图定位进行的。<br>@<a href="目录">TOC</a></p>
-<h1 id="拦截器类：IndexInterceptor"><a href="#拦截器类：IndexInterceptor" class="headerlink" title="拦截器类：IndexInterceptor"></a>拦截器类：IndexInterceptor</h1><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> interceptor<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Date<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletRequest<span class="token punctuation">;</span>
-<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletResponse<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ModelAndView<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>handler<span class="token punctuation">.</span>HandlerInterceptorAdapter<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IndexInterceptor</span> <span class="token keyword">extends</span> <span class="token class-name">HandlerInterceptorAdapter</span> <span class="token punctuation">{</span> 
-
-     <span class="token comment" spellcheck="true">/** 
-     * 在业务处理器处理请求之前被调用 
-     * 如果返回false 
-     *     从当前的拦截器往回执行所有拦截器的afterCompletion(),再退出拦截器链
-     * 如果返回true 
-     *    执行下一个拦截器,直到所有的拦截器都执行完毕 
-     *    再执行被拦截的Controller 
-     *    然后进入拦截器链, 
-     *    从最后一个拦截器往回执行所有的postHandle() 
-     *    接着再从最后一个拦截器往回执行所有的afterCompletion() 
-     */</span>   
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">preHandle</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span>   
-            HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"preHandle(), 在访问Controller之前被调用"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">}</span> 
-
-    <span class="token comment" spellcheck="true">/**
-     * 在业务处理器处理请求执行完成后,生成视图之前执行的动作   
-     * 可在modelAndView中加入数据，比如当前时间
-     */</span> 
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">postHandle</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span>   
-            HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span>   
-            ModelAndView modelAndView<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span> 
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"postHandle(), 在访问Controller之后，访问视图之前被调用,这里可以注入一个时间到modelAndView中，用于后续视图显示"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        modelAndView<span class="token punctuation">.</span><span class="token function">addObject</span><span class="token punctuation">(</span><span class="token string">"date"</span><span class="token punctuation">,</span><span class="token string">"由拦截器生成的时间:"</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> 
-
-    <span class="token comment" spellcheck="true">/** 
-     * 在DispatcherServlet完全处理完请求后被调用,可用于清理资源等  
-     *  
-     * 当有拦截器抛出异常时,会从当前拦截器往回执行所有的拦截器的afterCompletion() 
-     */</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">afterCompletion</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span>   
-            HttpServletResponse response<span class="token punctuation">,</span> Object handler<span class="token punctuation">,</span> Exception ex<span class="token punctuation">)</span> 
-    <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span> 
-
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"afterCompletion(), 在访问视图之后被调用"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token punctuation">}</span> 
-
-<span class="token punctuation">}</span></code></pre>
-<h1 id="配置拦截器"><a href="#配置拦截器" class="headerlink" title="配置拦截器"></a>配置拦截器</h1><p>修改springmvc-servlet.xml以对/index路径进行拦截</p>
-<p>如果要拦截其他路径：<br>/** 拦截所有<br>/category/** 拦截/category路径下的所有</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span> 
-    xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span> xmlns<span class="token operator">:</span>context<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/context"</span> 
-    xmlns<span class="token operator">:</span>mvc<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/mvc"</span> 
-    xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span>"http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans 
-     http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans<span class="token operator">/</span>spring<span class="token operator">-</span>beans<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd 
-     http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context 
-     http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context<span class="token operator">/</span>spring<span class="token operator">-</span>context<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd 
-     http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>mvc 
-     http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>mvc<span class="token operator">/</span>spring<span class="token operator">-</span>mvc<span class="token operator">-</span><span class="token number">3.0</span><span class="token punctuation">.</span>xsd"<span class="token operator">></span>
-    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"viewResolver"</span>
-        <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"prefix"</span> value<span class="token operator">=</span><span class="token string">"/WEB-INF/page/"</span> <span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span> <span class="token operator">/</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
-
-    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"simpleUrlHandlerMapping"</span>
-        <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"mappings"</span><span class="token operator">></span>
-            <span class="token operator">&lt;</span>props<span class="token operator">></span>
-                <span class="token operator">&lt;</span>prop key<span class="token operator">=</span><span class="token string">"/index"</span><span class="token operator">></span>indexController<span class="token operator">&lt;</span><span class="token operator">/</span>prop<span class="token operator">></span>
-            <span class="token operator">&lt;</span><span class="token operator">/</span>props<span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
-    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"indexController"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"controller.IndexController"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
-    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>interceptors<span class="token operator">></span>   
-        <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>interceptor<span class="token operator">></span>   
-            <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>mapping path<span class="token operator">=</span><span class="token string">"/index"</span><span class="token operator">/</span><span class="token operator">></span> 
-            <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 定义在mvc<span class="token operator">:</span>interceptor下面的表示是对特定的请求才进行拦截的 <span class="token operator">--</span><span class="token operator">></span> 
-            <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"interceptor.IndexInterceptor"</span><span class="token operator">/</span><span class="token operator">></span>     
-        <span class="token operator">&lt;</span><span class="token operator">/</span>mvc<span class="token operator">:</span>interceptor<span class="token operator">></span> 
-        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法 <span class="token operator">--</span><span class="token operator">></span> 
-    <span class="token operator">&lt;</span><span class="token operator">/</span>mvc<span class="token operator">:</span>interceptors<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span></code></pre>
-<h1 id="修改-index-jsp"><a href="#修改-index-jsp" class="headerlink" title="修改 index.jsp"></a>修改 index.jsp</h1><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">%</span>@ page language<span class="token operator">=</span><span class="token string">"java"</span> contentType<span class="token operator">=</span><span class="token string">"text/html; charset=UTF-8"</span>
-    pageEncoding<span class="token operator">=</span><span class="token string">"UTF-8"</span> isELIgnored<span class="token operator">=</span><span class="token string">"false"</span><span class="token operator">%</span><span class="token operator">></span>
-
-<span class="token operator">&lt;</span>h1<span class="token operator">></span>$<span class="token punctuation">{</span>message<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>p<span class="token operator">></span>$<span class="token punctuation">{</span>date<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></code></pre>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="https://img-blog.csdnimg.cn/20200519204349952.png" alt="在这里插入图片描述"></p>
+                <p>Typora 是一款支持实时预览的 Markdown 文本编辑器。由于在测试阶段，目前是免费的。<br>教程非常多：<br><a href="https://sspai.com/post/54912" target="_blank" rel="noopener">https://sspai.com/post/54912</a><br><a href="https://www.cnblogs.com/hider/p/11614688.html" target="_blank" rel="noopener">https://www.cnblogs.com/hider/p/11614688.html</a><br><a href="https://blog.csdn.net/yw00yw/article/details/81633266" target="_blank" rel="noopener">https://blog.csdn.net/yw00yw/article/details/81633266</a><br>就记录一下遇到的问题：</p>
+<h1 id="1-下载慢"><a href="#1-下载慢" class="headerlink" title="1.下载慢"></a>1.下载慢</h1><p><img src="https://img-blog.csdnimg.cn/20200522164012866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下载速度惨不忍睹。<br>找了找没有什么太好的解决办法。意外在腾讯软件中心找到了一个19年的版本。<br><img src="https://img-blog.csdnimg.cn/20200522164338239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下载这个版本以后软件内更新要快得多。</p>
+<h1 id="2-使用体验"><a href="#2-使用体验" class="headerlink" title="2.使用体验"></a>2.使用体验</h1><p>软件操作挺简单的。但是目前来说使用体验只能算一般。因为刚用markdown没几天，感觉Typora对我这样的新手不太友好。这两天写markdown用的是csdn的Markdown在线编辑器。<br><img src="https://img-blog.csdnimg.cn/20200522170241356.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hpZGVfb25fcnVzaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>刚学好多命令记不住，这个的体验效果要好一点。等以后用熟练了不再需要命令提示的时候，typora应该更好。毕竟typora的功能要全面得多。</p>
 
             </div>
             <hr/>
@@ -617,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiuzhu-github.github.io/2020/05/19/springmvc-guan-yu-lan-jie-qi-de-shi-yong/">https://xiuzhu-github.github.io/2020/05/19/springmvc-guan-yu-lan-jie-qi-de-shi-yong/</a>
+                    <a href="https://xiuzhu-github.github.io/2020/05/22/typor-de-shi-yong/">https://xiuzhu-github.github.io/2020/05/22/typor-de-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -655,12 +557,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SpringMVC/">
-                                    <span class="chip bg-color">SpringMVC</span>
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
                                 </a>
                             
-                                <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">实际操作</span>
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
                         </div>
@@ -828,7 +730,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Tue May 19 2020 21:20:36 GMT+0800',
+    id: 'Fri May 22 2020 17:11:33 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -853,9 +755,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://xiuzhu-github.github.io/2020/05/19/springmvc-guan-yu-lan-jie-qi-de-shi-yong/';
-        this.page.identifier = '/2020/05/19/springmvc-guan-yu-lan-jie-qi-de-shi-yong/';
-        this.page.title = 'SpringMVC关于拦截器的使用';
+        this.page.url = 'https://xiuzhu-github.github.io/2020/05/22/typor-de-shi-yong/';
+        this.page.identifier = '/2020/05/22/typor-de-shi-yong/';
+        this.page.title = 'Typora的使用';
     };
     let disqus_shortname = '';
 
@@ -881,50 +783,52 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/19/leetcode-shua-ti-ji-lu-shu-zu-yu-ju-zhen/">
+                <a href="/2020/05/22/typor-de-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="leetcode刷题记录——数组与矩阵">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Typora的使用">
                         
-                        <span class="card-title">leetcode刷题记录——数组与矩阵</span>
+                        <span class="card-title">Typora的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            leetcode刷题记录——数组与矩阵
+                            Typora的记录
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
+                            <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-category">
+                                    编辑器
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">数据结构与算法</span>
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>
@@ -938,31 +842,31 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/19/springmvc-shang-chuan-wen-jian/">
+                <a href="/2020/05/21/semaphore-shi-xian-abc-san-ge-xian-cheng-xun-huan-da-yin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SpringMVC上传文件">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="java Semaphore实现ABC三个线程循环打印">
                         
-                        <span class="card-title">SpringMVC上传文件</span>
+                        <span class="card-title">java Semaphore实现ABC三个线程循环打印</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringMVC上传文件
+                            简单的信号量练习
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
+                            <a href="/categories/java/" class="post-category">
+                                    java
                                 </a>
                             
                             
@@ -972,12 +876,16 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">实际操作</span>
+                    <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">多线程</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%83%E4%B9%A0/">
+                        <span class="chip bg-color">练习</span>
                     </a>
                     
                 </div>
