@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-22T09:13:19.841Z</updated>
+  <updated>2020-05-25T14:40:47.507Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,99 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql复习</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/25/mysql-fu-xi/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/25/mysql-fu-xi/</id>
+    <published>2020-05-25T14:39:28.061Z</published>
+    <updated>2020-05-25T14:40:47.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.w3school.com.cn/sql/index.asp&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SQL语句中文教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQl" scheme="https://xiuzhu-github.github.io/categories/MySQl/"/>
+    
+    
+      <category term="笔记" scheme="https://xiuzhu-github.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="MySQL" scheme="https://xiuzhu-github.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown插入表情</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/25/markdown-cha-ru-biao-qing/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/25/markdown-cha-ru-biao-qing/</id>
+    <published>2020-05-25T12:08:57.275Z</published>
+    <updated>2020-05-25T12:09:55.576Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;找到了一个网站&lt;a href=&quot;https://www.webfx.com/tools/emoji-cheat-sheet/，直接把表情对应的符号复制粘贴就行了。&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/tags/Markdown/"/>
+    
+      <category term="语法" scheme="https://xiuzhu-github.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java多线程笔记</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/23/java-duo-xian-cheng-bi-ji/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/23/java-duo-xian-cheng-bi-ji/</id>
+    <published>2020-05-23T14:15:47.128Z</published>
+    <updated>2020-05-23T14:56:52.474Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;java多线程笔记&lt;br&gt;9/100&lt;br&gt;保存草稿&lt;br&gt;发布文章&lt;br&gt;hide_on_rush&lt;/p&gt;
+&lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;1-基础&quot;&gt;&lt;a href=&quot;#1-基础&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://xiuzhu-github.github.io/categories/java/"/>
+    
+    
+      <category term="多线程" scheme="https://xiuzhu-github.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="笔记" scheme="https://xiuzhu-github.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="并发" scheme="https://xiuzhu-github.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Typora的使用</title>
@@ -524,30 +617,6 @@
     
     
       <category term="MVC" scheme="https://xiuzhu-github.github.io/tags/MVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/18/ce-shi/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/18/ce-shi/</id>
-    <published>2020-05-18T00:59:23.685Z</published>
-    <updated>2020-05-18T00:59:23.685Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;{\rtf1}&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
