@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-25T14:40:47.507Z</updated>
+  <updated>2020-05-26T14:03:54.452Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arraylist的源码学习</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/26/arraylist-yuan-ma-xue-xi/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/26/arraylist-yuan-ma-xue-xi/</id>
+    <published>2020-05-26T12:21:07.848Z</published>
+    <updated>2020-05-26T14:03:54.452Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;ArrayList简介&quot;&gt;&lt;a href=&quot;#ArrayList简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://xiuzhu-github.github.io/categories/Java/"/>
+    
+    
+      <category term="集合类" scheme="https://xiuzhu-github.github.io/tags/%E9%9B%86%E5%90%88%E7%B1%BB/"/>
+    
+      <category term="源码分析" scheme="https://xiuzhu-github.github.io/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql复习</title>
@@ -589,34 +619,6 @@
     
     
       <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MVC笔记</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/18/mvc-bi-ji/</id>
-    <published>2020-05-18T07:25:00.000Z</published>
-    <updated>2020-05-18T13:53:04.825Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;认识MVC&quot;&gt;&lt;a href=&quot;#认识MVC&quot; class=&quot;headerlink&quot; title=&quot;认识MVC&quot;&gt;&lt;/a&gt;认识MVC&lt;/h1&gt;&lt;h2 id=&quot;仅使用Servlet的短处&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="MVC" scheme="https://xiuzhu-github.github.io/categories/MVC/"/>
-    
-    
-      <category term="MVC" scheme="https://xiuzhu-github.github.io/tags/MVC/"/>
     
   </entry>
   
