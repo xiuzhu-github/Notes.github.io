@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xiuzhu-github.github.io/"/>
-  <updated>2020-05-27T14:24:35.675Z</updated>
+  <updated>2020-05-29T14:04:21.858Z</updated>
   <id>https://xiuzhu-github.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络笔记</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/29/ji-suan-ji-wang-luo-bi-ji/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/29/ji-suan-ji-wang-luo-bi-ji/</id>
+    <published>2020-05-29T14:03:03.416Z</published>
+    <updated>2020-05-29T14:04:21.858Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://xiuzhu-github.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="常用知识" scheme="https://xiuzhu-github.github.io/tags/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="面试题" scheme="https://xiuzhu-github.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java泛型笔记</title>
+    <link href="https://xiuzhu-github.github.io/2020/05/28/java-fan-xing-bi-ji/"/>
+    <id>https://xiuzhu-github.github.io/2020/05/28/java-fan-xing-bi-ji/</id>
+    <published>2020-05-28T12:58:38.725Z</published>
+    <updated>2020-05-28T13:00:03.619Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EfRMzwjM-1590660276898)(&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://xiuzhu-github.github.io/categories/Java/"/>
+    
+    
+      <category term="Java基础" scheme="https://xiuzhu-github.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="泛型" scheme="https://xiuzhu-github.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构与算法的总结</title>
@@ -131,9 +181,9 @@
       <category term="Markdown" scheme="https://xiuzhu-github.github.io/categories/Markdown/"/>
     
     
-      <category term="Markdown" scheme="https://xiuzhu-github.github.io/tags/Markdown/"/>
-    
       <category term="语法" scheme="https://xiuzhu-github.github.io/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="Markdown" scheme="https://xiuzhu-github.github.io/tags/Markdown/"/>
     
   </entry>
   
@@ -193,9 +243,9 @@
       <category term="编辑器" scheme="https://xiuzhu-github.github.io/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
     
-      <category term="Typora" scheme="https://xiuzhu-github.github.io/tags/Typora/"/>
-    
       <category term="Markdown" scheme="https://xiuzhu-github.github.io/tags/Markdown/"/>
+    
+      <category term="Typora" scheme="https://xiuzhu-github.github.io/tags/Typora/"/>
     
   </entry>
   
@@ -562,66 +612,6 @@
       <category term="eclipse" scheme="https://xiuzhu-github.github.io/tags/eclipse/"/>
     
       <category term="问题记录" scheme="https://xiuzhu-github.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注解方式进行配置页面跳转</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/18/zhu-jie-fang-shi-jin-xing-pei-zhi-ye-mian-tiao-zhuan/</id>
-    <published>2020-05-18T12:52:31.731Z</published>
-    <updated>2020-05-18T13:53:36.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;修改IndexController&quot;&gt;&lt;a href=&quot;#修改IndexController&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
-    
-      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC修改视图定位</title>
-    <link href="https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/"/>
-    <id>https://xiuzhu-github.github.io/2020/05/18/springmvc-xiu-gai-shi-tu-ding-wei/</id>
-    <published>2020-05-18T10:53:09.783Z</published>
-    <updated>2020-05-18T13:53:29.018Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;什么是视图定位&quot;&gt;&lt;a href=&quot;#什么是视图定位&quot; class=&quot;headerlink&quot; title=&quot;什么是视图定位&quot;&gt;&lt;/a&gt;什么是视图定位&lt;/h1&gt;&lt;p&gt;如果代码写成这样，就表示跳转到页面
-        
-      
-    
-    </summary>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/categories/SpringMVC/"/>
-    
-    
-      <category term="SpringMVC" scheme="https://xiuzhu-github.github.io/tags/SpringMVC/"/>
-    
-      <category term="实际操作" scheme="https://xiuzhu-github.github.io/tags/%E5%AE%9E%E9%99%85%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
