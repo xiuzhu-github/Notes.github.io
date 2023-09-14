@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>test</title>
+      <title>博客搭建笔记</title>
       <link href="/xiuzhu-github/xiuzhu-github.github.io/2023/09/13/test/"/>
       <url>/xiuzhu-github/xiuzhu-github.github.io/2023/09/13/test/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>测试</p>]]></content>
       
       
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
